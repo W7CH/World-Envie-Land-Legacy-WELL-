@@ -1,12 +1,9 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  --first-color: #e29f01;/*hsl(31, 76%, 74%);*/
+  --first-color: #4962f1;/*hsl(31, 76%, 74%);*/
   --button-color: hsl(0, 0%, 24%);
   --button-color-alt: hsl(0, 0%, 28%);
   --title-color: hsl(0, 0%, 95%);
@@ -245,6 +242,34 @@ button {
     transform: translateX(-100%);
     animation: left-to-right 1.5s forwards;
 }
+
+/*.slide-control {
+  z-index: 98;
+  color: var(--primary-color);
+  position: absolute;
+  bottom: 20px;
+  right: 25%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  /* animation: zoom 2s ease infinite;
+}
+
+.slide-control:hover {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.slide-control:hover i {
+  /* animation: bounce-left 2s ease infinite;
+  color: #000;
+}*/
 
 .nav-overlay {
   height: 100%;
@@ -820,6 +845,12 @@ button {
 .footer__social {
   display: flex;
   column-gap: 1rem;
+}
+
+.footer__social img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .footer__social-link {

@@ -5,7 +5,7 @@
   /*----- Colors -----*/
   --bg-color: #F0F0F0;
   --txt-color: #221E22;
-  --hover-color: #e29f01;
+  --hover-color: #4962f1;
   --body-color: hsl(0, 0%, 99%);
   --primary-color: #fff;
 }
@@ -421,7 +421,7 @@ a {
     font-weight: bold;
     background: linear-gradient(90deg,
               var(--primary-color) 20%,
-              #e29f01 80%);
+              #4962f1 80%);
     color: transparent;
     -webkit-background-clip: text;
     margin-bottom: 5%;

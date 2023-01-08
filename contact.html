@@ -2,64 +2,235 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Contact us</title>
+
+    <title>Contact</title>
 
     <link rel="shortcut icon" href="static/images/sample-modified.png">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
-        rel="stylesheet">
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="static/css/styles.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="static/css/contact_styles.css">
 </head>
 
 <body>
-    <div class="body_container" style="background-image: url(static/images/tamara-bellis.jpg);">
-
-        <!--==================== Header ====================-->
-        <div class="nav">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
             <div class="menu" onclick="openNav()">
                 <div class="hamburger"></div>
             </div>
-            <div class="title">
-                <img src="static/images/sample-modified.png" alt="Well logo" class="title_logo">
-                <a href="index.html" class="title_link">World Envie Land Legacy</a>
+            <a href="index.html" class="nav__logo" style="color: white;">Well</a>
+
+                <!--==================== MENU ====================-->
+                <div id="nav_bar" class="nav-overlay">
+                    <div class="nav-overlay-content">
+                        <p class="nav_description">
+                            Own your shirt not only in real life, but also in the metaverse...<br>
+                            Non-Fungible Tokens (NFTs) represent your ownership of a specific product.<br>
+                            NFTs are stored on a blockchain and can be bought, sold, and traded like other assets.
+                        </p>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="cart.html">Cart</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="about_us.html">About us</a>
+                        <!--<a href="#">Clients</a>-->
+                    </div>
+                </div>
+
+                <div class="slide-control"></div>
+
             </div>
-            <div class="cart">
-                <a href="cart.html"><i class='bx bx-cart-alt'></i></a>
+
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+
+        <!--==================== CONTACT SECTION ====================-->
+        <section class="contact-section">
+            <div class="contact-container">
+
+                <div class="contact-info">
+                  <h2>Contact info</h2>
+                  <div class="info">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <p>+33745660139</p>
+                  </div>
+                  <div class="info">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <p>word.envie.land.legacy@gmail.com</p>
+                  </div>
+                  <div class="info">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <p>Brest, Bretagne - 29200, France</p>
+                  </div>
+                </div>
+        
+                <div class="form">
+                  <div class="input-container">
+                    <input
+                      type="text"
+                      class="field"
+                      placeholder="Enter your name"
+                      id="name"
+                      name="name"
+                    />
+                    <label for="name"> Enter your name</label>
+                  </div>
+
+                  <div class="input-container">
+                    <input
+                      type="email"
+                      class="field"
+                      placeholder="Enter a valid email adress"
+                      id="email"
+                      name="email"
+                    />
+                    <label for="email"> Enter a valid email adress</label>
+                  </div>
+
+                  <div class="input-container msg-container">
+                    <textarea
+                      placeholder="Enter your message"
+                      class="field"
+                      rows="8"
+                      id="comment"
+                    ></textarea>
+                    <label for="comment" class="msg-label"> Enter your message</label>
+                  </div>
+                  <input
+                    type="submit"
+                    class="field submit"
+                    value="SUBMIT"
+                    id="submit"
+                  />
+                </div>
+              </div>
+        </section>
+
+        <!--==================== NEWSLETTER ====================-->
+        <section class="newsletter section container">
+            <div class="newsletter__bg grid">
+                <div>
+                    <h2 class="newsletter__title">Subscribe to our <br> Newsletter</h2>
+                    <p class="newsletter__description">
+                        Don't miss out on your discounts. Subscribe to our email 
+                        newsletter to get the best offers, discounts, coupons, 
+                        giveaways and much more.
+                    </p>
+                </div>
+
+                <form action="" class="newsletter__subscribe">
+                    <input type="email" placeholder="Enter your email" class="newsletter__input">
+                    <button class="button">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>France</li>
+                    <li>Brest, Bretagne - 29200</li>
+                    <li>+33745660139</li>
+                    <li><a href = "mailto: word.envie.land.legacy@gmail.com">Email: word.envie.land.legacy@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Our sections</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="index.html" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shop.html" class="footer__link">Shop</a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="footer__link">Cart</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">About WELL</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="about_us.html" class="footer__link">Story</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">NFTs</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Future vision</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copyrights</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="http://www.linkedin.com/in/wassim-chakroun" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin-square' ></i>
+                    </a>
+
+                    <a href="https://opensea.io/well_clothing" target="_blank">
+                        <img src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-Transparent%20White.png" alt="">
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt' ></i>
+                    </a>
+
+                    <a href="https://www.twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-youtube' ></i>
+                    </a>
+                </ul>
             </div>
         </div>
 
-        <!--==================== MENU ====================-->
-        <div id="nav_bar" class="nav-overlay">
-            <div class="nav-overlay-content">
-                <p class="nav_description">
-                    Own your shirt not only in real life, but also in the metaverse...<br>
-                    Non-Fungible Tokens (NFTs) represent your ownership of a specific product.<br>
-                    NFTs are stored on a blockchain and can be bought, sold, and traded like other assets.
-                </p>
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="cart.html">Cart</a>
-                <a href="contact.html">Contact</a>
-                <a href="about_us.html">About us</a>
-                <!--<a href="#">Clients</a>-->
-            </div>
-        </div>
+        <span class="footer__copy">&#169; 2023 All rigths reserved, Word-Envie-Land-Legacy with 💙</span>
+    </footer>
 
-        <div class="slide-control"></div>
+    <!--=============== SWIPER JS ===============-->
+    <script src="static/js/swiper-bundle.min.js"></script>
 
-        <div class="overlay"></div>
+    <!--=============== MAIN JS ===============-->
+    <script src="static/js/contact.js"></script>
 
-    </div>
-
-    <script src="static/js/main.js"></script>
+    <!--=============== ION ICONS ===============-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>
