@@ -349,20 +349,203 @@
     padding: 1rem 1.5rem;
   }
 
+  /*=============== SERVICES SECTION ===============*/
+  .serv-section {
+    margin-bottom: 15%;
+    text-align: center;
+    line-height: 2;
+    padding-top: 2rem;
+    margin-top: 7%;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+  }
+
+  .serv-section article {
+    background-color: rgb(235, 233, 233);
+    border-radius: 20px;
+    min-width: 34vw;
+    min-height: 35rem;
+    padding: 2rem 3rem;
+    height: auto;
+  }
+
+  article h1 {
+    color: var(--first-color);
+    font-size: 3.4rem;
+    font-weight: bold;
+    width: 80%;
+    letter-spacing: 1px;
+  }
+
+  article p {
+    padding: 2rem 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .blue-btn {
+    color: white;
+    background-color: var(--first-color);
+    border: 1px solid #5d6cc1;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  
+  .blue-btn:hover {
+    background-color: white;
+    color: var(--first-color);
+    border: 1px solid #5d6cc1;
+  }
+  
+  .btn-container {
+    margin-right: 1rem;
+  }
+
+  .services {
+    background-color: rgb(235, 233, 233);
+    margin: 0;
+  }
+  
+  .services > .offers {
+    height: auto;
+    width: 50%;
+    display: grid;
+    grid-template: minmax(20rem, 1fr) minmax(20rem, 1fr) / 40% 40%;
+    gap: 20px;
+    padding: 40px 0;
+    justify-content: center;
+  }
+  
+  .offer {
+    padding: 2rem;
+    border-radius: 7px;
+    background-color: white;
+    line-height: 2.2;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .offer:hover {
+    box-shadow: 0 0 20px rgba(180, 180, 180, 0.5);
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  .offer h1 {
+    font-size: 1.5rem;
+    color: var(--first-color);
+  }
+  .offer h2 {
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: underline var(--first-color);
+    letter-spacing: 1px;
+  }
+  
+  .offer p {
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .offer ion-icon {
+    font-size: 35px;
+    color: var(--first-color);
+    display: inline-block;
+    background-color: #5d6cc1;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+
+  /*=============== SPECIALITY SECTION ===============*/
+  .speciality-section {
+    text-align: center;
+    line-height: 2;
+    padding-top: 2rem;
+    margin-bottom: 15%;
+  }
+
+  .card_block{
+    float: left;
+    width: 23%;
+    padding: 0.5%;
+    margin: 0 5px 5px 5px;
+    border-radius: 5px;
+    background-color: rgb(235, 233, 233);
+  }
+  
+  .spec_container{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding-left: 2%;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .speciality{
+    min-height: 120px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #speciality_inner_container{
+    width:100%;
+    margin: 0 -5px;
+    align-items: center;
+    text-align: left;
+    float: left;
+  }
+
+  #speciality_inner_container:after{
+    content: "";
+    display: table;
+    clear: both;
+    align-items: center;
+  }
+
+  .count{
+    flex:1;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 50px;
+    line-height: 80%;
+    color: var(--first-color);
+    font-weight: 900;
+  }
+
+  .sub_heading{
+    flex:6;
+    font-weight: bold;
+    line-height: 100%;
+    padding-right: 5px;
+    flex-direction: column;
+    color: black;
+  }
+  .details{
+    flex: 0 1 100%;
+    text-align: justify;
+    padding-left: 3px;
+    font-size: 13px;
+    color: gray;
+    flex-direction: row;
+  }
+
   /*=============== TEAM SECTION ===============*/
   section h1 {
     color: var(--first-color);
     font-size: 3rem;
     font-weight: bold;
   }
-  
+
   .team-section {
     min-height: 100vh;
     text-align: center;
     line-height: 2;
     padding-top: 2rem;
-    margin-top: 7%;
   }
+
   .users {
     display: grid;
     grid-template-columns: repeat(4, 300px);

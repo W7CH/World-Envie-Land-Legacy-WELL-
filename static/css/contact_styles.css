@@ -351,7 +351,7 @@
 
   /*=============== CONTACT SECTION ===============*/
   .contact-section {
-    min-height: 100vh;
+    margin-bottom: 15%;
     margin: 0;
     margin-top: 7%;
     padding: 6rem 10rem;
@@ -399,6 +399,35 @@
     width: 25px;
     margin-right: 8px;
     align-self: flex-start;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 22px 46px 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    letter-spacing: 0.3px;
+  }
+
+  .btn.btn-accent {
+    background: var(--first-color);
+    color: white;
+  }
+
+  .btn.btn-accent:hover {
+    background: #5d6cc1;
+  }
+
+  .contact-info .location {
+    width: 300px;
+    height: 250px;
+    border: 1px solid var(--first-color);
+    allowfullscreen: ""; 
+    loading: "lazy";
+    referrerpolicy: "no-referrer-when-downgrade";
   }
   
   .form {
@@ -576,6 +605,11 @@ label {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    filter: none;
+  }
+
+  .footer__social img:hover {
+    filter: hue-rotate(0deg);
   }
   
   .footer__social-link {

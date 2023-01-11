@@ -148,3 +148,71 @@ else {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("submit").addEventListener("click", addComment);
 });
+
+/*=============== NEWSLETTER ===============*/
+// Get the form element
+var form = document.getElementById("newsletter-form");
+
+// Add a submit event listener to the form
+form.addEventListener("submit", function(event) {
+    // Prevent the form from submitting
+    event.preventDefault();
+
+    // Get the email value from the form
+    var email = form.elements.email.value;
+
+    // Validate the email address
+    if (validateEmail(email)) {
+        // If the email address is valid, send the email
+        sendEmail(email);
+    } else {
+        // If the email address is not valid, show an error message
+        alert("Please enter a valid email address");
+    }
+});
+
+// Email validation function
+function validateEmail(email) {
+    // Regular expression to match most email addresses
+    var re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    return re.test(email);
+}
+
+// Send email function
+function sendEmail(email) {
+  // create the payload
+  var data = {
+      "personalizations": [{
+          "to": [{ "email": email }]
+      }],
+      "from": { "email": "wassim.chakroun@supcom.tn" },
+      "subject": "Welcome to our Newsletter",
+      "content": [{
+          "type": "text/plain",
+          "value": "Thank you for subscribing to our newsletter! We'll be sending you regular updates and exclusive content."
+      }]
+  };
+
+  // send the email using the Fetch API
+  var apiKey = "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";
+  fetch("https://api.sendgrid.com/v3/mail/send", {
+      method: "POST",
+      headers: {
+          "Authorization": "Bearer " + apiKey,
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+  })
+  .then(function(response) {
+      if (response.ok) {
+          // if the email was sent successfully, show a success message
+          alert("Thank you for subscribing! A confirmation email has been sent to your inbox.");
+      } else {
+          // if there was an error, show an error message
+          alert("An error occurred while sending your email. Please try again later.");
+      }
+  })
+  .catch(function(error) {
+      console.log(error);
+  });
+}
