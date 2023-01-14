@@ -438,6 +438,24 @@ button {
   padding: 1rem 1.5rem;
 }
 
+/*=============== PARTNERS ===============*/
+#partners-container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* enable smooth scrolling on mobile devices */
+}
+
+.partner-logo {
+  flex-shrink: 0; /* prevent the logos from shrinking */
+  margin-right: 20px;
+}
+
+.partner-logo img {
+  max-width: 100%; /* make sure the logos are not too large */
+}
+
 /*=============== NEW ===============*/
 .new__card {
   position: relative;

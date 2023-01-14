@@ -182,3 +182,11 @@ if(cartClose){
     })
 }
 
+/*===== PARTNERS =====*/
+// get the partners container element
+var partnersContainer = document.getElementById("partners-container");
+
+// create an interval to automatically scroll the logos
+setInterval(function() {
+  partnersContainer.scrollLeft += 1; // increase the scrollLeft value by 1 to scroll right
+}, 50); // scroll every 50 milliseconds
