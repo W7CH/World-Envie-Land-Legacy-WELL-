@@ -243,6 +243,13 @@ button {
     animation: left-to-right 1.5s forwards;
 }
 
+.gif {
+  width: 50px; /* set the width of the GIF */
+  height: 50px; /* set the height of the GIF */
+  object-fit: cover; /* Set how the gif will fit in the container */
+  margin: 10px; /* Add margin around the GIF */
+}
+
 /*.slide-control {
   z-index: 98;
   color: var(--primary-color);
@@ -828,6 +835,8 @@ button {
 /*=============== FOOTER ===============*/
 .footer__container {
   row-gap: 2rem;
+  border-top: 1px solid var(--title-color);
+  padding-top: 3rem;
   border-bottom: 1px solid var(--title-color);
   padding-bottom: 3rem;
 }
