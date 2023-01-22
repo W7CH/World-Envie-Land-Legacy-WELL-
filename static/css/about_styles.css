@@ -358,7 +358,7 @@
 
   /*=============== SERVICES SECTION ===============*/
   .serv-section {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     line-height: 2;
     padding-top: 2rem;
     margin-top: 10%;
@@ -470,7 +470,7 @@
     text-align: center;
     line-height: 2;
     padding-top: 2rem;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
 
   .card_block{
@@ -612,6 +612,7 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
+
   .team-section img {
     width: 100%;
     display: block;
