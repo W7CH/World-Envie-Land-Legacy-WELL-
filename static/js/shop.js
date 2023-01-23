@@ -231,6 +231,8 @@ function updateCart() {
             <p>${item.price}</p>
             <p>Quantity: ${item.quantity}</p>
             <button onclick="removeFromCart('${item.id}')"><i class='bx bx-trash-alt'></i></button>
+            <button onclick="addItem('${item.id}')"><i class='bx bx-plus'></i></button>
+            <button onclick="reduceItem('${item.id}')"><i class='bx bx-minus'></i></button>
         `;
         //<button onclick="addItem('${item.id}')"><i class='bx bx-plus'></i>></button>
         //<button onclick="reduceItem('${item.id}')"><i class='bx bx-minus'></i>></button>
@@ -269,23 +271,23 @@ function removeFromCart(itemId) {
     updateCart();
 }
 
-/*
 // Function to increase an item quantity
 function addItem(itemId) {
-    let index = cart.findIndex(i => i.id === itemId);
-    cart.splice(index, 1);
+    let item = cart.find(i => i.id === itemId);
+    item.quantity++;
     updateCart();
 }
-*/
 
-/*
 // Function to reduce an item quantity
 function reduceItem(itemId) {
-    let index = cart.findIndex(i => i.id === itemId);
-    cart.splice(index, 1);
+    let item = cart.find(i => i.id === itemId);
+    if (item.quantity === 1) {
+        removeFromCart(item.id)
+    } else {
+        item.quantity--;
+    }
     updateCart();
 }
-*/
 
 /*
 <div class="cart__amount-content">
