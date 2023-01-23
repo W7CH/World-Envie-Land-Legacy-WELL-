@@ -81,92 +81,12 @@
 
             <h2 class="cart__title-center">My Cart</h2>
 
-            <div class="cart__container">
-                <article class="cart__card">
-                    <div class="cart__box">
-                        <img src="static/images/shirt2.jpg" alt="" class="cart__img">
-                    </div>
-
-                    <div class="cart__details">
-                        <h3 class="cart__title">Jazzmaster</h3>
-                        <span class="cart__price">$1050</span>
-
-                        <div class="cart__amount">
-                            <div class="cart__amount-content">
-                                <span class="cart__amount-box">
-                                    <i class='bx bx-minus' ></i>
-                                </span>
-
-                                <span class="cart__amount-number">1</span>
-
-                                <span class="cart__amount-box">
-                                    <i class='bx bx-plus' ></i>
-                                </span>
-                            </div>
-
-                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="cart__card">
-                    <div class="cart__box">
-                        <img src="static/images/shirt3.jpg" alt="" class="cart__img">
-                    </div>
-
-                    <div class="cart__details">
-                        <h3 class="cart__title">Rose Gold</h3>
-                        <span class="cart__price">$850</span>
-
-                        <div class="cart__amount">
-                            <div class="cart__amount-content">
-                                <span class="cart__amount-box">
-                                    <i class='bx bx-minus' ></i>
-                                </span>
-
-                                <span class="cart__amount-number">1</span>
-
-                                <span class="cart__amount-box">
-                                    <i class='bx bx-plus' ></i>
-                                </span>
-                            </div>
-
-                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="cart__card">
-                    <div class="cart__box">
-                        <img src="static/images/shirt2.jpg" alt="" class="cart__img">
-                    </div>
-
-                    <div class="cart__details">
-                        <h3 class="cart__title">Longines Rose</h3>
-                        <span class="cart__price">$980</span>
-
-                        <div class="cart__amount">
-                            <div class="cart__amount-content">
-                                <span class="cart__amount-box">
-                                    <i class='bx bx-minus' ></i>
-                                </span>
-
-                                <span class="cart__amount-number">1</span>
-
-                                <span class="cart__amount-box">
-                                    <i class='bx bx-plus' ></i>
-                                </span>
-                            </div>
-
-                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <div class="cart__container" id="cart-items"></div>
 
             <div class="cart__prices">
-                <span class="cart__prices-item">3 items</span>
-                <span class="cart__prices-total">$2880</span>
+                <span class="cart__prices-item" id="nbitems"></span>
+                <span class="cart__prices-total" id="total"></span>
+                <button id="checkout-btn" disabled>Checkout</button>
             </div>
         </div>
 
@@ -233,24 +153,34 @@
                     Arrivals
                 </h2>
                 
-                <div class="new__container">
-                    <div class="swiper new-swiper">
-                        <div class="swiper-wrapper">
-                            <article class="new__card swiper-slide">
-                                <span class="new__tag">New</span>
-        
-                                <img src="static/images/shirt2.jpg" alt="" class="new__img">
-        
-                                <div class="new__data">
-                                    <h3 class="new__title">Longines rose</h3>
-                                    <span class="new__price">$980</span>
-                                </div>
-        
-                                <button class="button new__button">ADD TO CART</button>
-                            </article>
-                     
+                <div class="arrivals__container grid">
+                    <article class="new__card" id="new1">
+                        <p class="new__tag">New</p>
+                        <img src="static/images/shirt2.jpg" alt="" class="new__img">
+                        <div class="new__data">
+                            <h3 class="new__title">Longines rose</h3>
+                            <span class="new__price">32€</span>
                         </div>
-                    </div>
+                        <button class="button new__button" onclick="addToCart('new1')">ADD TO CART</button>
+                    </article>
+                    <article class="new__card" id="new2">
+                        <p class="new__tag">New</p>
+                        <img src="static/images/shirt3.jpg" alt="" class="new__img">
+                        <div class="new__data">
+                            <h3 class="new__title">Longines green</h3>
+                            <span class="new__price">20€</span>
+                        </div>
+                        <button class="button new__button" onclick="addToCart('new2')">ADD TO CART</button>
+                    </article>
+                    <article class="new__card" id="new3">
+                        <p class="new__tag">New</p>
+                        <img src="static/images/shirt0.jpg" alt="" class="new__img">
+                        <div class="new__data">
+                            <h3 class="new__title">Bougacha</h3>
+                            <span class="new__price">30€</span>
+                        </div>
+                        <button class="button new__button" onclick="addToCart('new3')">ADD TO CART</button>
+                    </article>
                 </div>
             </section>
 
@@ -288,46 +218,38 @@
                 </h2>
 
                 <div class="products__container grid">
-                    <article class="products__card">
+                    <article class="products__card" id="prod1">
                         <img src="static/images/shirt2.jpg" alt="" class="products__img">
-
                         <h3 class="products__title">Spirit rose</h3>
-                        <span class="products__price">$1500</span>
-
-                        <button class="products__button">
+                        <span class="products__price">15€</span>
+                        <button class="products__button" onclick="addToCart('prod1')">
                             <i class='bx bx-shopping-bag'></i>
                         </button>
                     </article>
 
-                    <article class="products__card">
+                    <article class="products__card" id="prod2">
                         <img src="static/images/shirt3.jpg" alt="" class="products__img">
-
                         <h3 class="products__title">Khaki pilot</h3>
-                        <span class="products__price">$1350</span>
-
-                        <button class="products__button">
+                        <span class="products__price">17.5€</span>
+                        <button class="products__button" onclick="addToCart('prod2')">
                             <i class='bx bx-shopping-bag'></i>
                         </button>
                     </article>
 
-                    <article class="products__card">
+                    <article class="products__card" id="prod3">
                         <img src="static/images/shirt3.jpg" alt="" class="products__img">
-
                         <h3 class="products__title">Jubilee black</h3>
-                        <span class="products__price">$870</span>
-
-                        <button class="products__button">
+                        <span class="products__price">29€</span>
+                        <button class="products__button" onclick="addToCart('prod3')">
                             <i class='bx bx-shopping-bag'></i>
                         </button>
                     </article>
 
-                    <article class="products__card">
+                    <article class="products__card" id="prod4">
                         <img src="static/images/shirt2.jpg" alt="" class="products__img">
-
-                        <h3 class="products__title">Fosil me3</h3>
-                        <span class="products__price">$650</span>
-
-                        <button class="products__button">
+                        <h3 class="products__title">Fosil me</h3>
+                        <span class="products__price">24€</span>
+                        <button class="products__button" onclick="addToCart('prod4')">
                             <i class='bx bx-shopping-bag'></i>
                         </button>
                     </article>

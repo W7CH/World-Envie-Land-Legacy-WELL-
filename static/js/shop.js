@@ -162,7 +162,7 @@ const scrollUp = () =>{
 window.addEventListener('scroll', scrollUp)
 
 /*=============== SHOW CART ===============*/
-const cart = document.getElementById('cart'),
+const cartshow = document.getElementById('cart'),
       cartShop = document.getElementById('cart-shop'),
       cartClose = document.getElementById('cart-close')
 
@@ -170,7 +170,7 @@ const cart = document.getElementById('cart'),
 /* Validate if constant exists */
 if(cartShop){
     cartShop.addEventListener('click', () =>{
-        cart.classList.add('show-cart')
+        cartshow.classList.add('show-cart')
     })
 }
 
@@ -178,15 +178,125 @@ if(cartShop){
 /* Validate if constant exists */
 if(cartClose){
     cartClose.addEventListener('click', () =>{
-        cart.classList.remove('show-cart')
+        cartshow.classList.remove('show-cart')
     })
 }
 
-/*===== PARTNERS =====*/
-// get the partners container element
-var partnersContainer = document.getElementById("partners-container");
+/*===== CART FUNCTION =====*/
+// Create an array to store the cart items
+let cart = [];
 
-// create an interval to automatically scroll the logos
-setInterval(function() {
-  partnersContainer.scrollLeft += 1; // increase the scrollLeft value by 1 to scroll right
-}, 50); // scroll every 50 milliseconds
+// Function to add an item to the cart
+function addToCart(itemId) {
+  // Get the item element
+  let item = document.getElementById(itemId);
+  // Get the item name, price, and image
+  let itemName = item.querySelector('h3').innerHTML;
+  let itemPrice = item.querySelector('span').innerHTML;
+  let itemImg = item.querySelector('img').src;
+  
+  // Create a new object to represent the item in the cart
+  let cartItem = {
+    id: itemId,
+    name: itemName,
+    price: itemPrice,
+    img: itemImg,
+    quantity: 1
+}
+  
+    // Check if the item is already in the cart
+    let existingItem = cart.find(i => i.id === itemId);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push(cartItem);
+    }
+
+    // Update the cart display
+    updateCart();
+}
+
+// Function to update the cart display
+function updateCart() {
+    // Get the cart items element
+    let cartItemsEl = document.getElementById('cart-items');
+    cartItemsEl.innerHTML = '';
+
+    // Create an HTML element for each item in the cart
+    for (let item of cart) {
+        let itemEl = document.createElement('div');
+        itemEl.innerHTML = `
+            <img src="${item.img}" width="50">
+            <p>${item.name}</p>
+            <p>${item.price}</p>
+            <p>Quantity: ${item.quantity}</p>
+            <button onclick="removeFromCart('${item.id}')"><i class='bx bx-trash-alt'></i></button>
+        `;
+        //<button onclick="addItem('${item.id}')"><i class='bx bx-plus'></i>></button>
+        //<button onclick="reduceItem('${item.id}')"><i class='bx bx-minus'></i>></button>
+        cartItemsEl.appendChild(itemEl);
+    }
+
+    // Update the quantity display
+    let quantEl = document.getElementById('nbitems');
+    let nbitems = 0;
+    for (let item of cart) {
+        nbitems += item.quantity;
+    }
+    quantEl.innerHTML = `N° items: ${nbitems}`;
+
+    // Update the total display
+    let totalEl = document.getElementById('total');
+    let total = 0;
+    for (let item of cart) {
+        total += parseFloat(item.price) * item.quantity;
+    }
+    totalEl.innerHTML = `Total: ${total}€`;
+
+    // Enable/disable the checkout button
+    let checkoutBtn = document.getElementById('checkout-btn');
+    if (cart.length > 0) {
+        checkoutBtn.removeAttribute('disabled');
+    } else {
+        checkoutBtn.setAttribute('disabled', true);
+    }
+}
+
+// Function to remove an item from the cart
+function removeFromCart(itemId) {
+    let index = cart.findIndex(i => i.id === itemId);
+    cart.splice(index, 1);
+    updateCart();
+}
+
+/*
+// Function to increase an item quantity
+function addItem(itemId) {
+    let index = cart.findIndex(i => i.id === itemId);
+    cart.splice(index, 1);
+    updateCart();
+}
+*/
+
+/*
+// Function to reduce an item quantity
+function reduceItem(itemId) {
+    let index = cart.findIndex(i => i.id === itemId);
+    cart.splice(index, 1);
+    updateCart();
+}
+*/
+
+/*
+<div class="cart__amount-content">
+    <span class="cart__amount-box">
+        <i class='bx bx-minus' ></i>
+    </span>
+
+    <span class="cart__amount-number">1</span>
+
+    <span class="cart__amount-box">
+        <i class='bx bx-plus' ></i>
+    </span>
+</div>
+*/

@@ -536,6 +536,11 @@ article p {
 }
 
 /*=============== NEW ===============*/
+.arrivals__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
 .new__card {
   position: relative;
   text-align: center;
@@ -1150,7 +1155,7 @@ article p {
     height: 180px;
   }
 
-  .products__container {
+  .products__container, .arrivals__container {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
@@ -1246,7 +1251,7 @@ article p {
     order: -1;
   }
 
-  .products__container {
+  .products__container, .arrivals__container {
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
     gap: 2.5rem;
@@ -1324,7 +1329,7 @@ article p {
   }
 
   .products__container,
-  .new__container {
+  .arrivals__container {
     padding-top: 2rem;
   }
 
