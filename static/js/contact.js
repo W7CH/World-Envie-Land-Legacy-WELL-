@@ -185,7 +185,7 @@ function sendEmail(email) {
       "personalizations": [{
           "to": [{ "email": email }]
       }],
-      "from": { "email": "wassim.chakroun@supcom.tn" },
+      "from": { "email": "well.foreveryone@gmail.com" },
       "subject": "Welcome to our Newsletter",
       "content": [{
           "type": "text/plain",
