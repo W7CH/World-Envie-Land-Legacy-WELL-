@@ -162,13 +162,8 @@
     align-items: center;
   }
   
-  .nav__logo, 
-  .nav__shop, 
-  .nav__close {
-    color: var(--title-color);
-  }
-  
   .nav__logo {
+    color: var(--title-color);
     text-transform: uppercase;
     font-weight: var(--font-bold);
     letter-spacing: 1px;
@@ -188,6 +183,25 @@
       padding: 6rem 2rem 3.5rem;
       transition: .3s;
     }
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  
+  .nav__link {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    font-size: var(--h2-font-size);
+    transition: .3s;
+  }
+  
+  .nav__link:hover {
+    color: var(--first-color);
   }
   
   /*------ Menu uniform ------*/
@@ -706,6 +720,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    filter: brightness(0.7);
   }
   
   .footer__social-link {
@@ -790,9 +805,6 @@
       column-gap: 3rem;
     }
   
-    .nav__close {
-      display: none;
-    }
     .nav__list {
       flex-direction: row;
       column-gap: 2.5rem;
@@ -800,9 +812,6 @@
     .nav__link {
       text-transform: initial;
       font-size: var(--normal-font-size);
-    }
-    .nav__btns {
-      margin-left: auto;
     }
   
     .newsletter__bg {

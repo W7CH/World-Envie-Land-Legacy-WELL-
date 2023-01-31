@@ -236,7 +236,7 @@ body, html {
 }
 
 .title {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 500;
     cursor: pointer;
     opacity: 0;
@@ -245,8 +245,8 @@ body, html {
 }
 
 .title_logo {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     vertical-align: middle;
 }
 
@@ -327,10 +327,11 @@ body, html {
     height: 20px;
     margin-bottom: 5px;
     cursor: pointer;
+    background: none;
 }
 
 .social_media img:hover {
-    color: var(--hover-color);
+    background: var(--hover-color);
 }
 
 .slogan_2 {

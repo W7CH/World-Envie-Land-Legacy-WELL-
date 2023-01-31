@@ -162,13 +162,8 @@
     align-items: center;
   }
   
-  .nav__logo, 
-  .nav__shop, 
-  .nav__close {
-    color: var(--title-color);
-  }
-  
   .nav__logo {
+    color: var(--title-color);
     text-transform: uppercase;
     font-weight: var(--font-bold);
     letter-spacing: 1px;
@@ -189,6 +184,25 @@
       transition: .3s;
     }
   }
+
+  .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  font-size: var(--h2-font-size);
+  transition: .3s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
   
   /*------ Menu uniform ------*/
   .menu {
@@ -248,14 +262,6 @@
     background-color: white;
     overflow-x: hidden;
     transition: 0.5s;
-  }
-  
-  .nav__close {
-    font-size: 2rem;
-    position: absolute;
-    top: .9rem;
-    right: 1.25rem;
-    cursor: pointer;
   }
   
   .hamburger {
@@ -540,7 +546,7 @@ label {
   
   .newsletter__title {
     font-size: 1.6rem;
-    color: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 94%);
     margin-bottom: var(--mb-1-5);
   }
   
@@ -614,7 +620,7 @@ label {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    filter: none;
+    filter: brightness(0.7);
   }
 
   .footer__social img:hover {
@@ -702,10 +708,6 @@ label {
       justify-content: initial;
       column-gap: 3rem;
     }
-  
-    .nav__close {
-      display: none;
-    }
     .nav__list {
       flex-direction: row;
       column-gap: 2.5rem;
@@ -713,9 +715,6 @@ label {
     .nav__link {
       text-transform: initial;
       font-size: var(--normal-font-size);
-    }
-    .nav__btns {
-      margin-left: auto;
     }
   
     .newsletter__bg {

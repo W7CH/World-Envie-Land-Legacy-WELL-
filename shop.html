@@ -38,8 +38,13 @@
                             <a href="#arrivals" class="nav__link">Arrivals</a>
                         </li>
                         <li class="nav__item">
+                            <a href="#story" class="nav__link">Story</a>
+                        </li>
+                        <li class="nav__item">
                             <a href="#products" class="nav__link">Products</a>
-                            
+                        </li>
+                        <li class="nav__item">
+                            <a href="#testimonial" class="nav__link">Testimonial</a>
                         </li>
                     </ul>
 
@@ -87,6 +92,9 @@
                 <span class="cart__prices-item" id="nbitems"></span>
                 <span class="cart__prices-total" id="total"></span>
                 <button id="checkout-btn" disabled>Checkout</button>
+                <div id="message">
+                    Thanks for buying!
+                </div>
             </div>
         </div>
 
@@ -115,34 +123,6 @@
 
                             <button class="button home__button">ADD TO CART</button>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== PARTNERS ====================-->
-            <section class="part-section" id="partners">
-                <h2 class="section__title">
-                    Meet our partners
-                </h2>
-                <div class="part-list">
-                    <article>
-                      <h1>A word of praise to our dear partners.</h1>
-                      <p>
-                        A huge thank you to everyone <br>
-                        who contributed to making it a success.
-                      </p>
-                    </article>
-                    <div class="partners">
-                      <div class="partner">
-                        <div class="partner-logo">
-                            <a href="https://meetupparis.com"><img class="meetup" src="static/images/meet_up1.png" alt="meet_up"></a>
-                        </div>
-                      </div>
-                      <div class="partner">
-                        <div class="partner-logo">
-                            <a href="https://neutral-it.com"><img class="neutralit" src="static/images/neutral_it.png" alt="neutral_it"></a>
-                        </div>
-                      </div>
                     </div>
                 </div>
             </section>
@@ -194,7 +174,7 @@
             </section>
 
             <!--==================== STORY ====================-->
-            <section class="story section container">
+            <section class="story section container" id="story">
                 <div class="story__container grid">
                     <div class="story__data">
                         <h2 class="section__title story__section-title">
@@ -267,7 +247,7 @@
             </section>
 
             <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section container">
+            <section class="testimonial section container" id="testimonial">
                 <div class="testimonial__container grid">
                     <div class="swiper testimonial-swiper">
                         <div class="swiper-wrapper">
@@ -346,6 +326,34 @@
                     <div class="testimonial__images">
                         <div class="testimonial__square"></div>
                         <img src="static/images/shirt2.jpg" alt="" class="testimonial__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PARTNERS ====================-->
+            <section class="part-section" id="partners">
+                <h2 class="section__title">
+                    Acknowledgment
+                </h2>
+                <div class="part-list">
+                    <article>
+                      <h1>A word of praise to our dear partners.</h1>
+                      <p>
+                        A huge thank you to everyone <br>
+                        who contributed to making it possible.
+                      </p>
+                    </article>
+                    <div class="partners">
+                      <div class="partner">
+                        <div class="partner-logo">
+                            <a href="https://meetupparis.com"><img class="meetup" src="static/images/meet_up1.png" alt="meet_up"></a>
+                        </div>
+                      </div>
+                      <div class="partner">
+                        <div class="partner-logo">
+                            <a href="https://neutral-it.com"><img class="neutralit" src="static/images/neutral_it.png" alt="neutral_it"></a>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </section>

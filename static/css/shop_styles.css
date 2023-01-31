@@ -372,7 +372,7 @@ button {
 /*=============== HOME ===============*/
 .home__container {
   position: relative;
-  row-gap: 2.5rem;
+  row-gap: 2rem;
 }
 
 .home__img {
@@ -777,6 +777,7 @@ article p {
 /*=============== TESTIMONIAL ===============*/
 .testimonial__container {
   row-gap: 4rem;
+  margin-bottom: 13%;
 }
 
 .testimonial__quote {
@@ -955,6 +956,7 @@ article p {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  filter: brightness(0.7);
 }
 
 .footer__social-link {
@@ -1132,6 +1134,19 @@ article p {
 #checkout-btn:hover {
   background-color: hsl(0, 0%, 63%);
 }
+
+#message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom right, white, #4962f1);
+  color: black;
+  font-weight: bold;
+  padding: 150px;
+  border-radius: 5px;
+}   
 
 /* Show cart */
 .show-cart {

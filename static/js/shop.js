@@ -253,10 +253,22 @@ function updateCart() {
     }
     totalEl.innerHTML = `Total: ${total}€`;
 
+    // Select the message element
+    const message = document.getElementById('message');
+
     // Enable/disable the checkout button
     let checkoutBtn = document.getElementById('checkout-btn');
     if (cart.length > 0) {
         checkoutBtn.removeAttribute('disabled');
+        checkoutBtn.addEventListener('click', function() {
+            // Show the message element
+            message.style.display = 'block';
+            // Set a timer to hide the message after 5 seconds
+            setTimeout(function() {
+                message.style.display = 'none';
+            }, 5000);
+            //alert('Thanks for buying!');
+        });
     } else {
         checkoutBtn.setAttribute('disabled', true);
     }
@@ -286,17 +298,3 @@ function reduceItem(itemId) {
     }
     updateCart();
 }
-
-/*
-<div class="cart__amount-content">
-    <span class="cart__amount-box">
-        <i class='bx bx-minus' ></i>
-    </span>
-
-    <span class="cart__amount-number">1</span>
-
-    <span class="cart__amount-box">
-        <i class='bx bx-plus' ></i>
-    </span>
-</div>
-*/
