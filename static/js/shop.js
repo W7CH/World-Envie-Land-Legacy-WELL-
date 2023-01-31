@@ -228,14 +228,12 @@ function updateCart() {
         itemEl.innerHTML = `
             <img src="${item.img}" width="50">
             <p>${item.name}</p>
-            <p>${item.price}</p>
+            <p>Price: ${item.price}</p>
             <p>Quantity: ${item.quantity}</p>
             <button onclick="removeFromCart('${item.id}')"><i class='bx bx-trash-alt'></i></button>
             <button onclick="addItem('${item.id}')"><i class='bx bx-plus'></i></button>
             <button onclick="reduceItem('${item.id}')"><i class='bx bx-minus'></i></button>
         `;
-        //<button onclick="addItem('${item.id}')"><i class='bx bx-plus'></i>></button>
-        //<button onclick="reduceItem('${item.id}')"><i class='bx bx-minus'></i>></button>
         cartItemsEl.appendChild(itemEl);
     }
 
