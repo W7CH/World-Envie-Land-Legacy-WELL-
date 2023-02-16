@@ -290,6 +290,17 @@ button {
   transition: 0.5s;
 }
 
+.nav_description {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg,
+            var(--primary-color) 20%,
+            #4962f1 80%);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 5%;
+}
+
 .nav__close {
   font-size: 2rem;
   position: absolute;
@@ -416,6 +427,7 @@ button {
 
 .home__button {
   box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
+  cursor: default;
 }
 
 /*=============== BUTTONS ===============*/
@@ -1144,6 +1156,7 @@ article p {
   background: linear-gradient(to bottom right, white, #4962f1);
   color: black;
   font-weight: bold;
+  text-align: justify;
   padding: 150px;
   border-radius: 5px;
 }   

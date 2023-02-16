@@ -263,6 +263,17 @@
     overflow-x: hidden;
     transition: 0.5s;
   }
+
+  .nav_description {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg,
+              var(--primary-color) 20%,
+              #4962f1 80%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-bottom: 5%;
+}
   
   .nav__close {
     font-size: 2rem;
@@ -489,12 +500,16 @@
 
   .card_block{
     float: left;
-    width: 23%;
-    height: 13rem;
+    width: 20rem;
+    height: 15rem;
     padding: 0.5%;
     margin: 0 5px 5px 5px;
     border-radius: 5px;
     background-color: rgb(235, 233, 233);
+  }
+
+  .card_block:nth-of-type(3) {
+    margin-left: 30%;
   }
   
   .spec_container{
@@ -553,7 +568,7 @@
     flex: 0 1 100%;
     text-align: justify;
     padding-left: 3px;
-    font-size: 13px;
+    font-size: 14px;
     color: gray;
     flex-direction: row;
   }

@@ -266,7 +266,7 @@ function updateCart() {
             // Set a timer to hide the message after 5 seconds
             setTimeout(function() {
                 message.style.display = 'none';
-            }, 5000);
+            }, 7000);
             //alert('Thanks for buying!');
         });
     } else {

@@ -263,6 +263,17 @@
     overflow-x: hidden;
     transition: 0.5s;
   }
+
+  .nav_description {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg,
+              var(--primary-color) 20%,
+              #4962f1 80%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-bottom: 5%;
+}
   
   .hamburger {
     position: relative;
