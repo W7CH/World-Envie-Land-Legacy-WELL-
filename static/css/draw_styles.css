@@ -1,0 +1,17 @@
+#canvas-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
