@@ -264,7 +264,6 @@ body, html {
     position: relative;
     display: flex;
     align-items: center;
-    opacity: 0;
     transform: translateX(-100%);
     animation: left-to-right 1.5s forwards;
 }
@@ -333,6 +332,8 @@ body, html {
 }
 
 .social_media img:hover {
+    /*filter: hue-rotate(240deg);*/
+    /*filter: sepia(100%) hue-rotate(220deg) saturate(500%) brightness(75%);*/
     background: var(--hover-color);
 }
 

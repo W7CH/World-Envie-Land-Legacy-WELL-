@@ -8,8 +8,9 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel='stylesheet'>
     <link rel="stylesheet" href="static/css/log_styles.css" />
-    <title>Sign in & Sign up Form</title>
+    <title>Sign in & Sign up</title>
     <link rel="shortcut icon" href="static/images/sample-modified.png">
 
   </head>
@@ -17,7 +18,31 @@
   <body>
 
     <div class="container" style="background-image: url(static/images/sample-dodo.png);">
+      <!--==================== Header ====================-->
+        <div class="nav">
+            <div class="menu" onclick="openNav()">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+
+      <!--==================== MENU ====================-->
+        <div id="nav_bar" class="nav-overlay">
+          <div class="nav-overlay-content">
+              <p class="nav_description">
+                  &#169; World Envie Land Legacy - WELL
+              </p>
+              <a href="log.html">Log in</a>
+              <a href="index.html">Home</a>
+              <a href="shop.html">Shop</a>
+              <a href="design.html">Customize</a>
+              <a href="contact.html">Contact</a>
+              <a href="about_us.html">About us</a>
+              <!--<a href="#">Clients</a>-->
+          </div>
+        </div>
+
       <div class="overlay"></div>
+
       <div class="forms-container">
         <div class="signin-signup">
           <form action="#" class="sign-in-form">
@@ -29,7 +54,8 @@
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="password-input-signin" placeholder="Password" />
+              <span toggle="#password-input-signin" class="toggle-password-signin"></span>
             </div>
 
             <button class="btn solid" value="Login" ><a href="index.html">LOG IN</a></button>
@@ -65,7 +91,8 @@
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="password-input-signup" placeholder="Password" />
+              <span toggle="#password-input-signup" class="toggle-password-signup"></span>
             </div>
 
             <button class="btn solid" value="Signup" ><a href="index.html">SIGN UP</a></button>

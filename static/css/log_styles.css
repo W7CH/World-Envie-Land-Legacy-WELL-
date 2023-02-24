@@ -19,6 +19,139 @@ input {
   background-repeat: no-repeat;
 }
 
+.nav {
+  z-index: 99;
+  color: #fff;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  /*background-color: rebeccapurple;*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.menu {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 101;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transform: translateX(-100%);
+  animation: left-to-right 1.5s forwards;
+}
+
+.nav-overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 101;
+  top: 80px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.nav-overlay.active {
+  width: 100%;
+}
+
+.nav-overlay-content {
+  /*position: relative;*/
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav_description {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg,
+            #fff 20%,
+            #4962f1 80%);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 5%;
+}
+
+.nav-overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-overlay a:hover,
+.nav-overlay a:focus {
+  color: #f1f1f1;
+}
+
+.nav-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.hamburger {
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+}
+
+.hamburger-btn {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  border-radius: .5rem;
+  background-color: white;
+  transition: .4s;
+}
+
+.hamburger::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+}
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  left: 6px;
+}
+
+.hamburger.active::after {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  left: 6px;
+}
+
 .overlay {
   position: absolute;
   left: 0;
@@ -110,6 +243,44 @@ form.sign-in-form {
 .input-field input::placeholder {
   color: #aaa;
   font-weight: 500;
+}
+
+.toggle-password-signin {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.toggle-password-signin:before {
+  content: '\f06e';
+  font-family: FontAwesome;
+}
+
+.password-show-signin:before {
+  content: '\f070';
+}
+
+.toggle-password-signup {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.toggle-password-signup:before {
+  content: '\f06e';
+  font-family: FontAwesome;
+}
+
+.password-show-signup:before {
+  content: '\f070';
 }
 
 .social-text {

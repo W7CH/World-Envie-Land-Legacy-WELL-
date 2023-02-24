@@ -1004,6 +1004,10 @@ article p {
   filter: brightness(0.7);
 }
 
+.footer__social img:hover {
+  filter: hue-rotate(0deg);
+}
+
 .footer__social-link {
   font-size: 1.25rem;
   color: var(--text-color);

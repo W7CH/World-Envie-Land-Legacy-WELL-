@@ -715,12 +715,39 @@ openNav = () => {
     hamb.classList.toggle('active')
 }
 
-var draw_section = document.getElementById("editorImage"); //querySelector('.nav-overlay')
+/*var draw_section = document.getElementById("editorImage"); //querySelector('.nav-overlay')
 
 let saveButton = document.getElementById("download-button");
 saveButton.addEventListener("click", () => {
   let link = document.createElement("a");
   link.download = "tshirt.png";
   link.href = draw_section.toDataURL("image/png").replace("image/png", "image/octet-stream");
+  link.click();
+});*/
+
+const downloadBtn = document.getElementById("downloadBtn");
+const frontImage = document.getElementById("frontImage");
+const backImage = document.getElementById("backImage");
+
+downloadBtn.addEventListener("click", () => {
+  // Create a new canvas element
+  const canvas = document.createElement("canvas");
+  canvas.width = frontImage.width;
+  canvas.height = frontImage.height;
+
+  // Draw the front image on the canvas
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(frontImage, 0, 0);
+
+  // Draw the back image on the canvas
+  //ctx.drawImage(backImage, 0, 0); //ctx.drawImage(backImage, frontImage.width, 0);
+
+  // Convert the canvas to a data URL
+  //const dataURL = canvas.toDataURL();
+
+  // Create a temporary link element and click it to initiate the download
+  const link = document.createElement("a");
+  link.download = "t-shirt-design.png";
+  link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
   link.click();
 });
