@@ -194,7 +194,7 @@ function sendEmail(email) {
   };
 
   // send the email using the Fetch API
-  var apiKey = "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";
+  var apiKey = <YOUR_API_KEY>;
   fetch("https://api.sendgrid.com/v3/mail/send", {
       method: "POST",
       headers: {
